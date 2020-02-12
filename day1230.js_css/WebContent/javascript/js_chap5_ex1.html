@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// 배열!! => 자바스크립트에서는 배열이 객체이기 때문에 매우 중요하다!!!
+	// 6개의 모든 자료형을 한 배열 안에 다 넣을 수 있다.
+
+	// 크기를 지정하지 않은 배열 객체 생성
+	var varArr1 = new Array();
+
+	// 크기를 지정한 배열 객체 생성
+	var varArr2 = new Array(5);
+
+	//** 한개짜리 배열은 필요없으니까, 한 개만 있으면 길이!
+	// 두개 이상일때만 elements 저장!!!
+	
+	// 배열 생성과 데이터 저장을 동시에
+	var varArr3 = new Array(123, "ABC", true, function fun() {}, {}, undefined);
+
+	// 배열 생성과 데이터 저장을 동시에2
+	// => 자바와 다른점은 {}속에 element 집어넣지 않고 [] 속에 넣는다는것!!
+	var varArr4 = [ 123, "ABC", true, function fun() {}, {}, undefined ];
+
+	//==========================================================
+
+	// 배열 크기(길이)
+	var varArr = new Array(0, 1, 2, 3, 4, 5);
+	console.log("varArr.length: " + varArr.length);
+
+	var varArrTemp = new Array(100);
+	console.log("varArrTemp.length: " + varArrTemp.lenghth);
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<style type="text/css">
+#container {
+	max-width: 1000px;
+	display: grid;
+	grid-template-rows: 60px 1fr 60px; /* fr으로 된 부분이 flexible 즉 반응형 */
+	grid-template-columns: 20% 1fr 15%;
+	grid-template-areas: 
+	"header header header" /* 중복은 . 으로 표현 가능 */ 
+	"nav article ads" 
+	"footer footer footer"; 
+	grid-gap : 10px;
+	height: 100vh; /* view height: 각각의 미디어화면에 보이는 뷰를 분할해서 %로 나타냄 */
+	margin: 0 auto;
+	grid-gap: 10px;
+}
+
+@media ( max-width : 600px) { /* 모바일 */
+	#container {
+		max-width: 900px;		
+		display: grid;
+		grid-template-rows: auto auto 1fr auto auto;
+		grid-template-areas: 
+		"header" /* 중복은 . 으로 표현 가능 */ 
+	 	"nav" 
+	 	"article"
+	 	"ads"
+	 	"footer";
+	 	/* 화면이 작으니깐 한줄에 하나만~~~ */
+		grid-gap: 10px;
+		min-width: 100vh; /* view height: 각각의 미디어화면에 보이는 뷰를 분할해서 %로 나타냄 */
+		margin: 0 auto;
+	}
+}
+
+header, footer, article, nav, #siteAds {
+	background-color: gold;
+	padding: 20px;
+}
+
+/* grid-area: ooo => 영역에 이름붙이기를 통해 개별 통제 */
+#pageHeader {
+	grid-area: header;
+}
+
+#pageFooter {
+	grid-area: footer;
+}
+
+#mainArticle {
+	grid-area: article;
+}
+
+#mainNav {
+	grid-area: nav;
+}
+
+#siteAds {
+	grid-area: ads;
+}
+</style>
+
+</head>
+<body>
+	<div id="container">
+		<header id="pageHeader">Header</header>
+		<article id="mainArticle">Article</article>
+		<nav id="mainNav">Nav</nav>
+		<div id="siteAds">Ads</div>
+		<footer id="pageFooter">Footer</footer>
+	</div>
+</body>
+</html>

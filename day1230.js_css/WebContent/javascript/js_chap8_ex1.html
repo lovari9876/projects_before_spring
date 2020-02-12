@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// 명시(선언)적 함수 생성
+	function funName() {
+		console.log("명시(선언)적 함수의 기능을 실행합니다.");
+	}
+
+	// 익명 함수 생성
+	var funAnonymous = function() {
+		console.log("익명 함수의 기능을 실행합니다.");
+	}
+
+	funName(); // 함수이름으로 호출
+	funAnonymous(); // 변수 이름으로 호출 => 이름+() 형식!
+
+	console.log("funName함수 보기: \n" + funName); // 함수 코드 전체를 출력!!
+	console.log("funName함수 실행: \n" + funName());
+	console.log("funAnonymous함수 보기: \n" + funAnonymous); 
+	console.log("funAnonymous함수 실행: \n" + funAnonymous());
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

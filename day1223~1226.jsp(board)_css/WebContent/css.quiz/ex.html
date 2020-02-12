@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>ex</title>
+
+<style>
+#box {
+	width: 800px;
+	height: 600px;
+	border: 1px solid #ccc;
+	text-align: center;
+	margin: 0 auto;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+}
+
+header, footer, #nav, #wrap, #content, #banner {
+	height: 100px;
+	line-height: 100px;
+	border: 1px solid #ccc;
+	text-align: center;
+	margin: 5px;
+	box-sizing: border-box;
+}
+
+#navigation {
+	height: 40px;
+	border: 1px hidden #ccc;
+	text-align: center;
+	float: top;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+#menu {
+	border: 1px hidden #ccc;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+p {
+	width: 130px;
+	height: 40px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	text-align: center;
+	margin-bottom: 5px;
+	float: left;
+	position: relative;
+	left: 13px;
+}
+
+p:nth-child(1) {
+	
+}
+
+p:nth-child(2) {
+	
+}
+
+p:nth-child(3) {
+	
+}
+
+p:nth-child(4) {
+	
+}
+
+p:nth-child(5) {
+	
+}
+
+#wrap {
+	height: 300px;
+}
+
+#content, #banner {
+	height: 290px;
+	border: 1px solid #ccc;
+	text-align: center;
+	margin: 5px;
+	box-sizing: border-box;
+	float: left;
+}
+
+#content {
+	width: 600px;
+
+}
+
+#banner {
+	margin-left: 0;
+	float: right;
+}
+
+footer {
+	
+}
+</style>
+
+</head>
+
+<body>
+	<div id="box">
+		<header>HEADER</header>
+
+		<nav id="nav">
+			<div id="navigation">NAVIGATION</div>
+			<div id="menu">
+				<p>menu1</p>
+				<p>menu2</p>
+				<p>menu3</p>
+				<p>menu4</p>
+				<p>menu5</p>
+			</div>
+		</nav>
+
+		<div id="wrap">
+			<div id="content">CONTENT</div>
+			<div id="banner">BANNER</div>
+		</div>
+
+		<footer>FOOTER</footer>
+	</div>
+</body>
+</html>

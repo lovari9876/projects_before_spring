@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//자바스크립트는 배열이 객체이다~~~!
+	//그렇기에 배열 내부에 멤버변수, 함수 모두 존재!!
+	
+	// ** 기본 함수 보기~~~
+
+	//indexOf()
+	var varArrIndex = new Array(123, "ABC", "가나다", "abc", "가나다", "123");
+	console.log("varArrIndex.indexOf(\"가나다\"): " + varArrIndex.indexOf("가나다"));
+	console.log("varArrIndex.lastIndexOf(\"가나다\"): " + varArrIndex.lastIndexOf("가나다"));
+	console.log("varArrIndex.indexOf(123): " + varArrIndex.indexOf(123));
+	console.log("varArrIndex.lastIndexOf(123): " + varArrIndex.lastIndexOf(123));
+	console.log("varArrIndex.indexOf(\"xyz\"): " + varArrIndex.indexOf("xyz"));
+	//존재하지 않는 값에 대하여 -1을 리턴!
+	
+	// concat()
+	var varArrFir = new Array("ABC", "DEF", "GHI", "JKL");
+	
+	
+	// push()
+	var varArrPush = new Array("ABC", "DEF");
+	console.log("varArrPush: " + varArrPush.push("가나다", "마바사"));
+	console.log("varArrPush: "+ varArrPush);
+	
+	// shift(), pop()
+	var varArrShiftPop = new Array("가", "나", "다", "라", "마");
+	
+	// shift()는 배열의 맨 앞의 값을 리턴하면서 배열에서 삭제!
+	console.log("varArrShiftPop.shift(): "+ varArrShiftPop.shift());
+	console.log("varArrShiftPop: "+ varArrShiftPop);
+	
+	// pop()은 맨 마지막 데이터를 리턴하면서 배열에서 삭제한다!
+	console.log("varArrShiftPop.pop(): "+ varArrShiftPop.pop());
+	console.log("varArrShiftPop: "+ varArrShiftPop);
+	
+	// unshift()는 맨 앞에 값 추가!
+	varArrShiftPop.unshift("가");
+	varArrShiftPop[varArrShiftPop.length] = "마";
+	console.log("varArrShiftPopOri: "+ varArrShiftPop);
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

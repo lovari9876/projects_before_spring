@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	// 문자
+	var str = "가나다라마바사" // 문자는 "" ''모두 가능
+	console.log("str: " + str);
+	console.log("str: " + str + 'ABCDEFG'); // ''도 문자 가능!
+	console.log("str: " + str + '\n\t"ABCDEFG"'); // 탈출문자 가능
+	// "\n\t\"ABCDEFG\"" => ""로 문자 표기하려면 \" 탈출문자 필수!
+
+	//숫자
+	var num = 123;
+	console.log("num: " + num);
+
+	num = 123.456;
+	console.log("num: " + num);
+	console.log("num: " + num + 1000);
+	console.log("num: " + (num + 1000)); // 연산하려면  () 필수!
+
+	// boolean
+	var boo = true;
+	console.log("boo: " + boo);
+	console.log("boo: " + boo + 1);
+	console.log("boo: " + (boo + 1)); 
+	// ()안에선 boo를 자동형변환하여 1로 처리 
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

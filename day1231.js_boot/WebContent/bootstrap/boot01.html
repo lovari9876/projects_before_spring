@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<!-- width는 해당 디바이스 크기로 맞추고 initial-scale=1 은 확대안하고 default size로 보겠다는 것-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- 외부 css 파일 링크로 받아서 호출하기 : import 비스무리한거 -->
+<!-- css: cascading style sheet -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- 외부 링크에서 받아오면 브라우저 관련 폴더에 캐시로 저장된다~~ 저장안되고는 불러올수가 없는것...... -->
+<!-- css 가져오고 나서 js 받아오기 -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<!-- 부트스트랩에서 이미 지정된 container 같은 클래스나 아이디를 통해, 기본적인 레이아웃 등을 적용받을 수 있음-->
+	<div class="container">
+		<!-- fixed width -->
+		<h1>my first Bootstrap 페이지</h1>
+		<p>This is some text.</p>
+		<p>
+			This is
+			<mark>some text.</mark>
+			<!-- default로 연노랑이 백그라운드 컬러가 된다리 -->
+		</p>
+		<p>The abbr element is used to mark up an abbreviation or acronym.</p>
+		<p>
+			The <abbr title="World Health Organization">WHO</abbr> was founded in
+			1948.
+		</p>
+		<blockquote>
+			<p>For 50 years, WWF has been protecting the future of nature.
+				The world's leading conservation organization, WWF works in 100
+				countries and is supported by 1.2 million members in the United
+				States and close to 5 million globally.</p>
+			<footer>From WWF's website</footer>
+		</blockquote>
+	</div>
+
+	<div class="container-fluid">
+		<!-- full width -->
+		<h1>
+			h1 Bootstrap <small>heading (36px)</small>
+		</h1>
+		<h2>
+			h2 Bootstrap <small>heading (30px)</small>
+		</h2>
+		<!-- small 태그는 각각의 크기에 따라 작아지는 정도가 다름 -->
+		<h3>h3 Bootstrap heading (24px)</h3>
+		<h4>h4 Bootstrap heading (18px)</h4>
+		<h5>h5 Bootstrap heading (14px)</h5>
+		<h6>h6 Bootstrap heading (12px)</h6>
+	</div>
+</body>
+</html>

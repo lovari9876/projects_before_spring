@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var varNum = 100;
+
+	// if문
+	if (varNum > 50) {
+		console.log("varNum > 50");
+	}
+
+	if (varNum <= 50) {
+		console.log("varNum <= 50");
+	}
+
+	console.log("varNum : " + varNum);
+
+	// if-else 문
+	if (varNum < 50) {
+		console.log("varNum < 50");
+	} else {
+		console.log("varNum >= 50");
+	}
+
+	// if-else if-else
+	if (varNum > 200) {
+		console.log("varNum >200");
+	} else if (varNum > 150) {
+		console.log("varNum >150");
+	} else if (varNum > 100) {
+		console.log("varNum >100");
+	} else
+		console.log("varNum <=100");
+
+	// switch
+	var varNum = 100;
+	switch (varNum) {
+	case 200:
+		console.log("varNum: 200");
+		break;
+
+	case 150:
+		console.log("varNum: 150");
+		break;
+
+	default:
+		console.log("varNum: " + varNum);
+		break;
+	}
+
+	// 삼항 연산자
+	var varNum1 = "1234";
+	var varNum2 = "4321";
+
+	var varResult = (varNum1 > varNum2) ? "varNum1 > varNum2"
+			: "varNum1 <= varNum2";
+	console.log("varResult: " + varResult);
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
