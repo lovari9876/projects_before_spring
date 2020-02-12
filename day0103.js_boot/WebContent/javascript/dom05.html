@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	// style 설정! => style 객체를 통해!
+	// inline 태그로 style을 동적으로 적용하게 된다.
+
+	window.onload = function() {
+		var str = "";
+		str += "<p id='jsTitle'> javascript & node.js <p/>";
+		str += "<img id='logoImg', src='../img/arianaGrande.jpg'>";
+
+		document.body.innerHTML = str;
+
+		var titleNode = document.getElementById("jsTitle");
+		titleNode.style.fontSize = "1.2em";
+		titleNode.style.border = "1px solid #ff0000";
+
+		var logoNode = document.getElementById("logoImg");
+		logoNode.style.width = "400px";
+		logoNode.style.height = "auto";
+	};
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

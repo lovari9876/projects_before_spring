@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 해당 프로젝트 전체에 대한 설정파일이다!!
+	 수정 후 저장하면 다시 한 번 서버 시작해줘야 함 -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>day1211.jsp_survlet</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>helloworld</servlet-name>
+		<servlet-class>edu.bit.ex.HelloWorld</servlet-class> <!-- .class 파일 경로와 이름 -->
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>helloworld</servlet-name>
+		<url-pattern>/hw</url-pattern>
+	</servlet-mapping>
+	
+</web-app>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	function openWin(url, width, height) {
+		console.log("screen.width: " + screen.width);
+		console.log("screen.height: " + screen.height);
+
+		var left = screen.width/2 - width/2;
+		var top = screen.height/2 - height/2;
+		var opt = "width = " + width +", height = " + height + ", left = "+ left+", top = "+top;
+
+		open(url, "newWin", opt); // 새 창 열라는 실행 함수!
+	};
+
+	openWin("http://www.naver.com", 800, 500);
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

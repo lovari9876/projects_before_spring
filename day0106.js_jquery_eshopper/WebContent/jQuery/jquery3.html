@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<!-- 주소로 cdn 받아오기! 가장 최신 버젼 받아오는 것 -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script>
+	window.onload = function() {
+		// jQuery 기본 문법!
+		// $(선택자).동작함수();
+		jQuery("p").css("lineHeight", "300px");
+		$("p").css("width", "500px"); // jQuery 대신에 $ 사용!
+		$("p").css("height", "300px");
+		$("p").css("border", "1px solid #ccc");
+
+	}
+
+	//***** window.onload = function() {} 와 같다!!!!
+	$(document).ready(function() {
+		jQuery("p").css("lineHeight", "300px");
+		$("p").css("width", "500px"); // jQuery 대신에 $ 사용!
+		$("p").css("height", "300px");
+		$("p").css("border", "1px solid #ccc");
+	} /* 여기까지가 function  */)
+
+	// *********** 저것도 길다고 이렇게 줄여버림!!
+	//***** window.onload = function() {} 와 같다!!!! 
+	$(function() {
+		jQuery("p").css("lineHeight", "300px");
+		$("p").css("width", "500px"); // jQuery 대신에 $ 사용!
+		$("p").css("height", "300px");
+		$("p").css("border", "1px solid #ccc");
+	} /* 여기까지가 function  */)
+</script>
+
+</head>
+<body>
+	<p>Hello jQuery!</p>
+</body>
+</html>

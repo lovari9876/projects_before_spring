@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<style>
+/* 클릭해서 입력하려고 하면 focus, 입력이 가능한것은 enabled, 불가능은 disabled */
+input:focus {
+	border: 2px solid #ff0000;
+	padding: 10px
+}
+
+input:enabled {
+	color: #00ff00;
+	font-weight: bold;
+}
+
+input:disabled {
+	color: #ff0000;
+}
+</style>
+
+</head>
+<body>
+	<div>
+		<form>
+			이름: <input type="text" name="uname" /> <br />
+			 아이디: <input type="text" name="upw" /> <br />
+			 비밀번호 : <input type="password"	name="upw" value="12345" disabled="disabled" /><br>
+		</form>
+	</div>
+
+</body>
+</html>

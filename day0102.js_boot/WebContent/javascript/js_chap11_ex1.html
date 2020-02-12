@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	// 함수를 이용한 객체 생성: 함수가 객체를 리턴할 수 있다!!
+	function createCar(name, color, speed) {
+		var carObj = {
+			name : name,
+			color : color,
+			speed : speed,
+			run : function() {
+				return this.speed + "km/h";
+			}
+		};
+		return carObj;
+	};
+
+	var sorento = createCar("SORENTO", "GREY", 220);
+	console.log("sorento.name: " + sorento.name);
+	console.log("sorento.run: " + sorento.run());
+
+	var soul = createCar("SOUL", "WHITE", 180);
+	console.log("soul.name: " + soul.name);
+	console.log("soul.run: " + soul.run());
+
+	// 생성자를 이용한 객체 생성 => 함수 이름 대문자로 시작!
+	function Airplane(name, color, speed) { // {}가 그냥 객체가 된다.
+		this.name = name;
+		this.color = color;
+		this.speed = speed;
+		this.fly = function() {
+			return this.speed + " fly!";
+		};
+	};
+
+	// 생성자로 객체 생성 시에는 new로 객체 생성할 것!!
+	var boeing747 = new Airplane("boeing747", "white/blue", "600km/h");
+
+	console.log("boeing747.name: " + boeing747.name);
+	console.log("boeing747.color: " + boeing747.color);
+	console.log("boeing747.fly: " + boeing747.fly());
+	
+	
+	// prototype 사용하기!
+	functon Scoring(player, scoreFirst, scoreSecond, scoreThird) {
+		this.player = player;
+		this.scoreFirst = scoreFirst;
+		this.scoreSecond = scoreSecond;
+		this.scoreThird = scoreThird;
+	};
+	
+	Scoring.prototype.getTotal = function() {
+		return this.scoreFirst + this.scoreSecond + this.scoreThird;
+	};
+	
+	Scoring.prototype.getAverage = function() {
+		return (this.getTotal() /3).toFixed(3);
+	};
+	
+	var player1 = new Scoring("홍길동", 99, 90, 92);
+	console.log(player1.player + "의 총점 : " + player1.getTotal());
+	console.log(player1.player + "의 평균 : " + player1.getAverage());
+	
+	var player2 = new Scoring("홍길롱", 80, 90, 85);
+	console.log(player2.player + "의 총점 : " + player2.getTotal());
+	console.log(player2.player + "의 평균 : " + player2.getAverage());
+	
+	var player3 = new Scoring("홍길몽", 100, 90, 93);
+	console.log(player3.player + "의 총점 : " + player3.getTotal());
+	console.log(player3.player + "의 평균 : " + player3.getAverage());
+	
+	
+	// getter, setter
+	function BMICalculator() {
+		var height = 0;
+		var weight = 0;
+		
+		this.bmi = function() {
+			return (this.weight / (this.height * this.height)).toFixed(2);
+			// Number.prototype.toFixed(); Number라는 생성자에 프로토타입함수로 toFixed()가 있다.
+		};
+		
+		this.getHeight = function(){
+			retirn this.height;
+		};
+		
+		// Not-A-Number(숫자가 아님)
+		this.setHeight = function(height) {
+			if(!isNaN(height)) {
+				this.height = height;
+			}else {
+				console.log("height is NaN(not a number)!");
+			}
+		};
+		
+		this.getWeight = function() {
+			return this.weight;
+		};
+		
+		this.setWeight = function(weight) {
+			if(!isNaN(weight)) {
+				this.weight = weight;
+			}else {
+				console.log("weight is NaN!")
+			}
+		};
+	};	
+
+	var myBMI = new BMICalculator();
+	myBMI.setHeight(1.9);
+	myBMI.setWeight(90);
+	
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

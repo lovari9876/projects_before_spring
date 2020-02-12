@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<!-- 주소로 cdn 받아오기! 가장 최신 버젼 받아오는 것 -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script>
+	//***** window.onload = function() {} 와 같다!!!!
+	$(document).ready(function() {
+		$("*").css("fontSize", "1.1em"); /* 전체 선택자 */
+		$("li").css("color", "#0000ff"); // 태그 선택자
+		$("#item").css("background", "#ffff00").css("width", "300px"); // 아이디 선택자
+		$(".seoul").css("background", "#ff0000"); // 클래스 선택자
+		$("#wrap p").css("border", "2px solid #ccc"); // 후손 선택자
+		$("#wrap>p").css("border", "5px solid #ccc"); // 자손 선택자
+	} /* 여기까지가 function  */
+	)
+</script>
+
+</head>
+<body>
+	<div id="wrap">
+		<p>jQuery selector</p>
+
+		<div id="content">
+			<h1>content</h1>
+			<p>가나다라마바사아자차카</p>
+			<p>ABCDEFGHI</p>
+		</div>
+		<div id="item">
+			<ul>
+				<!-- 인라인으로 스타일을 주어도 <script>에서 onload로 실행을 제일 마지막에 하기 때문에 -->
+				<!-- function() 내부 로직에서 마지막으로 적용한 것이 실행된다~~! -->
+				<li style="color: gray;" class="seoul">서울</li>
+				<li class="gyeonggi_do">경기도</li>
+				<li>충청도</li>
+				<li>전라도</li>
+				<li>경상도</li>
+				<li>강원도</li>
+				<li>제주도</li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>

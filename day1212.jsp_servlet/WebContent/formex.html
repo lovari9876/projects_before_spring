@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- action에 따라 FormEx.java로 가서 실행함.
+	실행 후에 이 정보들이 FormEx.java의 doPost의 인자 request로 넘어감-->
+	<form action="FormEx" method="post">
+		이름: <input type="text" name="name" size="10"><br/>
+		아이디: <input type="text" name="id" size="10"><br/>
+		비밀번호: <input type="password" name="pw" size="10"><br/>
+		<!-- type이 password이면 클라이언트가 웹 상에서 입력시 입력글자가 가려짐! -->
+		
+		<input type="checkbox" name="hobby" value="cook">요리
+		<input type="checkbox" name="hobby" value="run">조깅
+		<input type="checkbox" name="hobby" value="swim">수영
+		<input type="checkbox" name="hobby" value="sleep">취침<br/>
+		<!-- checkbox는 name이 같아야 만들어짐: 중복 가능!! -->
+		
+		<input type="radio" name="major" value="kor">국어
+		<input type="radio" name="major" value="eng" checked="checked">영어
+		<input type="radio" name="major" value="mat">수학
+		<input type="radio" name="major" value="des">디자인<br/>
+		
+		<select name="protocol">
+			<option value="http">http</option>
+			<option value="ftp" selected="selected">ftp</option>
+			<option value ="smtp">smtp</option>
+			<option value="pop">pop</option>
+		</select><br/>
+		
+		<input type="submit" value="전송">
+		<input type="reset" value="초기화">
+		<!-- 이 두가지는 버튼을 생성한다! submit 제출함과 동시에 전송하고, reset은 누르면 초기화한다. -->
+	</form>
+	
+</body>
+</html>

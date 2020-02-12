@@ -1,0 +1,26 @@
+[
+	{
+		"ename":"SMITH",
+		"sal":800
+	},
+	{
+		"ename":"ALLEN",
+		"sal":1600
+	},
+	{
+		"ename":"WARD",
+		"sal":1250
+	},
+	{
+		"ename":"JONES",
+		"sal":2975
+	},
+	{
+		"ename":"MARTIN",
+		"sal":1250
+	},
+	{
+		"ename":"BLAKE",
+		"sal":2850
+	}
+]

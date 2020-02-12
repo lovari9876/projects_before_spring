@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>JavaScript</title>
+
+<script src="jquery-3.2.1.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+
+		var wrapObj = $("#wrap");
+
+		/*
+			객체 생성
+		 */
+		var divObj = $("<div> Hello jQuery! </div>");
+
+		/*
+			객체 삽입
+		 */
+		// 삽입 안해주면 divObj는 화면에 안나타나!
+		divObj.appendTo(wrapObj); //.appendTo()
+		//wrapObj.append(divObj);		//.append()
+		//divObj.prependTo(wrapObj);	//.prependTo()
+		//wrapObj.prepend(divObj);		//.prepend()
+
+		//divObj.insertAfter(wrapObj);	//.insertAfter()
+		//wrapObj.after(divObj);		//.after()
+		//divObj.insertBefore(wrapObj);	//.insertBefore()
+		//wrapObj.before(divObj);		//.before()
+
+	});
+</script>
+</head>
+
+<body>
+
+	<div id="wrap">
+		<div>contents</div>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	/* 
+	 1. 다음 표를 자바스크립트 객체로 나타내시오(키 이름과 자료형은 적절하다고 생각하는 것으로 사용합니다.)
+
+	 이름              Nature of Code
+	 가격              30000원
+	 저자              다니엘 쉬프만
+	 ISBN       9788968481901
+	 페이지 수        620페이지
+	 */
+	var book = {
+		name : "Nature of Code",
+		price : 30000,
+		author : "다니엘 쉬프만",
+		isbn : "9788968481901",
+		pages : 620
+	};
+
+	/* 
+	 2. 다음 표의 객체를 생성할 수 있는 생성자 함수를 만드시오(생성자 함수 이름은 Product, 키 이름과 자료형은 적절하다고 생각하는 것으로 사용합니다).
+
+	 이름              돼지삼겹살
+	 무게              100g
+	 가격              1690원
+	 calculate(<무게>)       무게를 기반으로 가격을 계산합니다.
+	 예: product.calculate(200)을 입력하면, 100g * 2 = 200g이므로 '3380원'을 출력합니다.
+	 */
+	function Product(name, weight, price) {
+		this.name = name;
+		this.weight = weight;
+		this.price = price;
+		this.calculate = function(weight) {
+			return (weight / this.weight) * this.price;
+		}
+	};
+
+	var product = new Product("돼지삼겹살", 100, 1690);
+	console.log(product.calculate(200));
+
+	/////////////prototype 사용////////////////////////
+
+	function Product2(name, weight, price) {
+		this.name = name;
+		this.weight = weight;
+		this.price = price;
+	};
+
+	Product2.prototype.calculate = function(weight) {
+		return (weight / this.weight) * this.price;
+	}
+
+	var product2 = new Product2("돼지삼겹살", 100, 1690);
+	console.log(product2.calculate(200)); // 호출할땐 prototype안쓰고 그냥 객체.함수()로 호출!!
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

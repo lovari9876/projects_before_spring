@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>join_form</title>
+
+<style>
+table, tr, td {
+	border-type: hidden;
+}
+</style>
+
+</head>
+
+<body>
+
+	<form action="q8_join.jsp" method="post">
+		<table>
+			<tr>
+				<td>이름</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td>성별</td>
+				<td><select name="sex">
+						<option value="여자">여자</option>
+						<option value="남자">남자</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>아이디</td>
+				<td><input type="text" name="id"></td>
+			</tr>
+			<tr>
+				<td>비밀번호</td>
+				<td><input type="password" name="pw"></td>
+			</tr>
+			<tr>
+				<td>비밀번호확인</td>
+				<td><input type="password" name="cpw"></td>
+			</tr>
+			<tr>
+				<td>주소</td>
+				<td><input type="text" name="address"></td>
+			</tr>
+			<tr>
+				<td>전화번호</td>
+				<td><input type="tel" name="tel"></td>
+			</tr>
+			<tr>
+				<td>이메일 주소</td>
+				<td><input type="email" name="email"></td>
+			</tr>
+			<tr>
+				<td>취미</td>
+				<td>축구<input type="checkbox" name="hobby" value="soccer">
+					야구<input type="checkbox" name="hobby" value="baseball"> 농구<input
+					type="checkbox" name="hobby" value="basketball"> <br /> 수영<input
+					type="checkbox" name="hobby" value="swim"> 게임<input
+					type="checkbox" name="hobby" value="game"> 독서<input
+					type="checkbox" name="hobby" value="reading"><br /> 음악<input
+					type="checkbox" name="hobby" value="music"> TV<input
+					type="checkbox" name="hobby" value="TV"> 영화<input
+					type="checkbox" name="hobby" value="movie"> <br /> 연극<input
+					type="checkbox" name="hobby" value="play"> 뮤지컬<input
+					type="checkbox" name="hobby" value="musical"> 전시<input
+					type="checkbox" name="hobby" value="exhibit"></td>
+			</tr>
+		</table>
+
+		<hr>
+		<input type="submit" value="회원가입">
+	</form>
+
+</body>
+</html>

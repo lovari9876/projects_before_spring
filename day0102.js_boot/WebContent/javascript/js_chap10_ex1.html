@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	// 객체 생성 예시
+
+	var funName = function() {
+	};
+	console.log(typeof funName);
+
+	var objName = {};
+	console.log(typeof objName);
+
+	var objData = {
+		num : 123,
+		str : "abc",
+		boo : true,
+		fun : function() {
+		},
+		obj : {}, // 객체는 {}로 생성
+		arr : [ 1, 2, 3 ], // 배열은 []로 생성
+		ude : undefined
+	};
+
+	console.log(typeof objData);
+	console.log("objData.num : " + objData.num);
+	console.log("objData.str : " + objData.str);
+	console.log("objData.boo : " + objData.boo);
+	console.log("objData.fun : " + objData.fun);
+	console.log("objData.obj : " + objData.obj);
+	console.log("objData.arr : " + objData.arr);
+	console.log("objData.ude : " + objData.ude);
+
+	// 객체 속성과 메서드
+	var objCar = {
+		width : "3m",
+		height : "2m",
+		cc : "2000cc",
+		energy : 100,
+		speed : function(power) {
+			return this.energy * power;
+		}
+	};
+
+	console.log("objCar.speed: " + objCar.speed(2));
+
+	// 객체의 멤버 접근 방법 2가지
+	var objName = {
+		nation : "korea",
+		captical : "seoul",
+		language : "hangeul",
+		population : 51000000,
+		nationalAnthem : function() {
+			console.log("Play korean national anthem~");
+		}
+	};
+
+	console.log("objName.nation: " + objName.nation);
+	console.log("objName.population: " + objName.population);
+	console.log("objName[\"nation\"] : " + objName["nation"]);
+	console.log("objName[\"population\"] : " + objName["population"]);
+
+	objName.nationalAnthem();
+
+	// 객체 멤버를 for-in문으로 출력하기
+	var objCar = {
+		width : "3m",
+		height : "2m",
+		cc : "2000cc",
+		energy : 100,
+		speed : function(power) {
+			return this.energy * power;
+		}
+	};
+
+	var print = "";
+	for ( var key in objCar) {
+		// if(typeof objCar[key] == "function") continue;
+		print += key + " : " + objCar[key] + "\n";
+	}
+
+	// in키워드 => key존재 유무 확인, with키워드 => 객체접근을 간소화
+	var objName = {
+		name : "Lee sun sin",
+		nation : "korea",
+		gender : "male",
+		character : "good"
+	};
+
+	// in 키워드
+	console.log("nation" in objName); // true
+	console.log("age" in objName); // false
+
+	// with 키워드
+	with (objName) {
+		console.log("name: " + name);
+		console.log("nation: " + nation);
+		console.log("gender: " + gender);
+		console.log("character: " + character);
+	}
+
+	// 함수를 이용한 객체 생성: 함수가 객체를 리턴할 수 있다!!
+	function createCar(name, color, speed) {
+		var carObj = {
+			name : name,
+			color : color,
+			speed : speed,
+			run : function() {
+				return this.speed + "km/h";
+			}
+		};
+		return carObj;
+	};
+
+	var sorento = createCar("SORENTO", "GREY", 220);
+	console.log("sorento.name: " + sorento.name);
+	console.log("sorento.run: " + sorento.run());
+
+	var soul = createCar("SOUL", "WHITE", 180);
+	console.log("soul.name: " + soul.name);
+	console.log("soul.run: " + soul.run());
+
+	// 생성자를 이용한 객체 생성 => 함수 이름 대문자로 시작!
+	function Airplane(name, color, speed) { // {}가 그냥 객체가 된다.
+		this.name = name;
+		this.color = color;
+		this.speed = speed;
+		this.fly = function() {
+			return this.speed + " fly!";
+		};
+	};
+
+	// 생성자로 객체 생성 시에는 new로 객체 생성할 것!!
+	var boeing747 = new Airplane("boeing747", "white/blue", "600km/h");
+
+	console.log("boeing747.name: " + boeing747.name);
+	console.log("boeing747.color: " + boeing747.color);
+	console.log("boeing747.fly: " + boeing747.fly());
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

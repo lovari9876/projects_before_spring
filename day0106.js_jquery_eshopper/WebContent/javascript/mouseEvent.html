@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script>
+window.onload = function() {
+	var me = document.getElementById("mouseEvent");
+	
+	me.addEventListener("click", function() {
+		console.log("click event!!");
+	}, false);
+	
+	me.addEventListener("mouseover", function() {
+		console.log("mouseover event!!");
+	}, false);
+	
+	me.addEventListener("mouseout", function() {
+		console.log("mouseout event!!");
+	}, false);
+	
+	me.addEventListener("mousemove", function() {
+		console.log("mousemove event!!");
+	}, false);
+	
+	me.addEventListener("mousedown", function() {
+		console.log("mousedown event!!");
+	}, false);
+	
+	me.addEventListener("mouseup", function() {
+		console.log("mouseup event!!");
+	}, false);
+	
+	me.addEventListener("dblclick", function() {
+		console.log("dblclick event!!");
+	}, false);
+	
+
+}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

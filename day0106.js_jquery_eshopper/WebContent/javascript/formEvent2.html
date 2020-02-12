@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script>
+	window.onload = function() {
+		var sbmBtn = document.getElementById("sbmBtn"); // submit button
+		sbmBtn.onclick = function() {
+			if (document.getElementById("uId").value = "") {
+				alert("user id blank!!");
+			} else if (document.getElementById("uPw").value = "") {
+				alert("user pw blank!!");
+			} else {
+				alert("login ok!!");
+				document.getElementById("loginForm").submit();
+			}
+		};
+
+		var resBtn = document.getElementById("resBtn");
+		resBtn.onclick = function() {
+			alert("reset ok!!");
+			document.getElementById("loginForm").reset();
+		};
+	}
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

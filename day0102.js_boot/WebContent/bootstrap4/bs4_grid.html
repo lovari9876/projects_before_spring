@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<!-- col-6는 bs4에서만 작동한다. -->
+			<div class="col-6" style="background-color: red;">aaa</div>
+			<div class="col-6" style="background-color: blue;">>bbb</div>
+		</div>
+	</div>
+	<hr />
+	<!-- Extra small <576px	
+		Small ≥576px	
+		Medium ≥768px	
+		Large ≥992px	
+		Extra large ≥1200px -->
+	<!-- 정해진 사이즈에 맞추어 순차적으로 미디어쿼리 적용된다.  -->
+	<div class="container">
+		<div class="row">
+			<!-- -sm-을 넣어주면 smallest 미디어에서 블록태그의 원래 역할로 돌아온다. -->
+			<!-- 즉 작은 화면에서도 보기 쉽게 가로에서 세로로 나열된다. -->
+			<div class="col-sm-6" style="background-color: red;">aaa</div>
+			<div class="col-sm-6" style="background-color: blue;">>bbb</div>
+		</div>
+	</div>
+	<hr />
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6" style="background-color: red;">aaa</div>
+			<div class="col-md-6" style="background-color: blue;">>bbb</div>
+		</div>
+	</div>
+	<hr />
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6" style="background-color: red;">aaa</div>
+			<div class="col-lg-6" style="background-color: blue;">>bbb</div>
+		</div>
+	</div>
+	<hr />
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-6" style="background-color: red;">aaa</div>
+			<div class="col-xl-6" style="background-color: blue;">>bbb</div>
+		</div>
+	</div>
+	<hr />
+	<div class="container">
+		<div class="row">
+			<!-- 비율을 2:10으로 유지하다가 지정된 small사이즈 시점에 본래 속성인 블럭태그로 돌아간다. -->
+			<div class="col-sm-2" style="background-color: red;">aaa</div>
+			<div class="col-sm-10" style="background-color: blue;">>bbb</div>
+		</div>
+	</div>
+	<hr />
+	<div class="container">
+		<div class="row">
+			<!-- 비율 2:4:4:2 로 12 column 유지하지만 sm미디어 쿼리 적용되면 블럭태그로 돌아간다. -->
+			<div class="col-sm-2">aaa</div>
+			<div class="col-sm-4" style="background-color: red;">aaa</div>
+			<div class="col-sm-4" style="background-color: blue;">>bbb</div>
+			<div class="col-sm-2">bbb</div>
+		</div>
+	</div>
+
+</body>
+</html>

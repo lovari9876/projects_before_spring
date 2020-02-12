@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<!-- Window.onload() -->
+<!-- 페이지를 모두 불러온뒤, loaded 한 뒤에야 onload가 실행된다. -->
+<!-- 즉, 바디 바트를 다 읽어낸 후에야 onload 자동으로!!!! 실행!! -->
+<script type="text/javascript">
+	window.onload = function() {
+		console.log("FIRST!");
+	};
+	// 글구 on어쩌구니까 얘도 이벤트!
+</script>
+
+</head>
+<body>
+	<script>
+		console.log("SECOND!");
+	</script>
+
+	<script>
+		console.log("THIRDf!");
+	</script>
+</body>
+</html>

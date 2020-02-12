@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>BOM</title>
+
+<script type="text/javascript">
+	var newWindow = window.open("http://www.google.com", "google",
+			"width=500, height=600");
+
+	// 위치 조정
+	newWindow.moveTo(50, 50);
+	for (var i = 0; i < 1000; i++) {
+		newWindow.moveBy(1, 1);
+	}
+
+	// 사이즈 조절
+	newWindow.resizeTo(500, 600);
+	for (var i = 0; i < 200; i++) {
+		newWindow.resizeBy(-1, -1);
+	}
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+
+<!-- 주소로 cdn 받아오기! 가장 최신 버젼 받아오는 것 -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script>
+	// $() 문서 객체 생성
+	$(document)
+			.ready(
+					function() {
+						var wrapObj = $("#wrap");
+
+						// <div> 객체 생성 및 추가
+						var divObj = $("<div>Hello jQuery! </div>");
+						divObj.appendTo(wrapObj);
+						divObj.css("background", "#ff0000");
+
+						// 아래처럼 한 줄로 처리할 수도 있지만 가독성을 위해 위처럼 풀어 쓸 것!!
+						// $("<div>Hello jQuery! </div>")).appendTo(wrapObj).css("background", "#ff0000");
+
+						// <a>객체 생성 및 추가
+						var aObj = $("<a href='http://www.google.com' target='_blank'>google </a><br/>");
+						aObj.appendTo(wrapObj);
+
+						// <img>객체 생성 및 추가				
+						var imgObj = $("<img src='../img/arianaGrande.jpg' /><br>");
+						imgObj.appendTo(wrapObj);
+
+						// <img>, 속성 객체 생성 및 추가
+						var tempObj = {
+							src : "../img/arianaGrande.jpg",
+							width : 297,
+							height : 'auto',
+							border : "5px"
+						};
+
+						var imgAObj = $("<img>", tempObj);
+						imgAObj.appendTo(wrapObj);
+
+					})
+</script>
+
+</head>
+<body>
+	<div id="wrap"></div>
+</body>
+</html>

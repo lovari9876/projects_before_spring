@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>JavaScript</title>
+
+<script src="jquery-3.2.1.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+
+		var co = $("#wrap > .contents1 > .p").clone();
+		co.appendTo($("#wrap > .contents1"));
+
+		// 위 코드는 아래와 두 줄과 각 각 동일함~~~~
+		//($("#wrap > .contents1 > .p").clone()).appendTo($("#wrap > .contents1"));
+		//$("#wrap > .contents1").append($("#wrap > .contents1 > .p").clone());
+
+	});
+</script>
+
+<style>
+#wrap .contents1 .p {
+	background: #ff0000;
+}
+</style>
+</head>
+
+<body>
+
+	<div id="wrap">
+		<div class="contents1">
+			<p class="p">contents1</p>
+		</div>
+	</div>
+
+</body>
+
+</html>
